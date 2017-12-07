@@ -24,7 +24,8 @@ passport.use(
         {
             clientID: keys.googleClientID,
             clientSecret: keys.googleClientSecret,
-            callbackURL: '/auth/google/callback' //configure a route, that user will be redirected after authentication
+            callbackURL: '/auth/google/callback', //configure a route, that user will be redirected after authentication
+            proxy: true
         },
         (accessToken, refreshToken, profile, done) => {
             //this function returns a promise
