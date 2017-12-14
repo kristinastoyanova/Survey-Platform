@@ -1,6 +1,6 @@
 const keys = require('../config/keys');
 const stripe =  require('stripe')(keys.stripeSecretKey);
-const requireLogin = require('../middlewares/requireLogin');
+const requireLogin = require('../middlewares/requireLogin'); //Make sure the user is logged in
 
 module.exports = app => {
 
